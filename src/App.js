@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./app.css";
+import Hello from "./component/Hello";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+  const name="Tom";
+  const naver={
+    name:"naver",
+    url:"https://naver.com",
+  };
+
+return (
+  <div className="App">
+    <h1
+      style={{
+        color:"#f0f",
+        backgroudColor:"green",
+      }}
+      >
+        Hello,{name}.<p>{2+3}</p>
+      </h1>
+
+      <a href={naver.url}>{naver.name}</a>
+    <Hello/>
+    <Hello/>
+
+  </div>
+
+);
+
+
 }
-
 export default App;
